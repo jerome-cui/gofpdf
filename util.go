@@ -450,6 +450,10 @@ func isChinese(rune2 rune) bool {
 	if rune2 >= rune(0x4e00) && rune2 <= rune(0x9fa5) {
 		return true
 	}
+	// full width punctuation
+	if rune2 >= rune(0xff01) && rune2 <= rune(0xff60) {
+		return true
+	}
 	return false
 }
 
