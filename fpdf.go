@@ -143,6 +143,7 @@ func fpdfNew(orientationStr, unitStr, sizeStr, fontDirStr string, size SizeType)
 	f.stdPageSizes["a6"] = SizeType{297.64, 420.94}
 	f.stdPageSizes["a2"] = SizeType{1190.55, 1683.78}
 	f.stdPageSizes["a1"] = SizeType{1683.78, 2383.94}
+	f.stdPageSizes["a0"] = SizeType{2383.94, 3370.39}
 	f.stdPageSizes["letter"] = SizeType{612, 792}
 	f.stdPageSizes["legal"] = SizeType{612, 1008}
 	f.stdPageSizes["tabloid"] = SizeType{792, 1224}
@@ -2925,7 +2926,7 @@ func (f *Fpdf) WriteLinkID(h float64, displayStr string, linkID int) {
 //
 // width indicates the width of the box the text will be drawn in. This is in
 // the unit of measure specified in New(). If it is set to 0, the bounding box
-//of the page will be taken (pageWidth - leftMargin - rightMargin).
+// of the page will be taken (pageWidth - leftMargin - rightMargin).
 //
 // lineHeight indicates the line height in the unit of measure specified in
 // New().
